@@ -21,7 +21,8 @@
   "author": "Evan You",
   "main": "index.js",
   "dependencies": {
-    "@vuepress/theme-default": "^1.4.0"
+    "@vuepress/theme-default": "^1.4.0",
+    "snyk": "^1.316.1"
   },
   "publishConfig": {
     "access": "public"
@@ -31,5 +32,10 @@
       "name": "ULIVZ",
       "email": "chl814@foxmail.com"
     }
-  ]
+  ],
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
