@@ -29,7 +29,8 @@
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
     "vuepress-plugin-container": "^2.0.2",
-    "vuepress-plugin-smooth-scroll": "^0.0.3"
+    "vuepress-plugin-smooth-scroll": "^0.0.3",
+    "snyk": "^1.316.1"
   },
   "publishConfig": {
     "access": "public"
@@ -39,5 +40,10 @@
       "name": "ULIVZ",
       "email": "chl814@foxmail.com"
     }
-  ]
+  ],
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
